@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.daron.sc2.MainActivity">
+
+    <item
+        android:id="@+id/nav_facebook"
+        android:title="@string/nav_facebook"
+        android:icon="@drawable/ic_facebook"/>
+
+    <item
+        android:id="@+id/nav_instagram"
+        android:title="@string/nav_instagram"
+        android:icon="@drawable/ic_instagram"/>
+
+</menu>
