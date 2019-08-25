@@ -1,23 +1,18 @@
 package com.example.daron.sc2;
 
-import android.app.SearchManager;
-import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.inputmethod.EditorInfo;
 
 import com.example.daron.sc2.adapters.igfavrvadapter;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class IgFav extends AppCompatActivity implements SearchView.OnQueryTextListener, igfavrvadapter.ViewHolder.OnNoteListener {
@@ -27,6 +22,7 @@ public class IgFav extends AppCompatActivity implements SearchView.OnQueryTextLi
     //vars
     private ArrayList<String> mNames = new ArrayList<>();
     private ArrayList<String> mImageUrls = new ArrayList<>();
+    private ArrayList<String> mIgUrls = new ArrayList<>();
     public igfavrvadapter adapter;
 
 
@@ -45,7 +41,9 @@ public class IgFav extends AppCompatActivity implements SearchView.OnQueryTextLi
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 5));
 
-            }
+
+
+                    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -81,6 +79,8 @@ public class IgFav extends AppCompatActivity implements SearchView.OnQueryTextLi
 
         }
         adapter.updateList(newList);
+
+
         return true;
 
                     }
@@ -88,274 +88,46 @@ public class IgFav extends AppCompatActivity implements SearchView.OnQueryTextLi
 
     private void initImageBitmaps(){
 
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/d2171cd8edabffba57a636c83bccbfff/5D23DBF8/t51.2885-19/s150x150/16790327_403358713348502_4758126789560107008_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
+        mImageUrls.add("https://scontent-ort2-2.cdninstagram.com/vp/90279ff5e8086e833f3241de5c56eba3/5DE02608/t51.2885-19/s320x320/16790327_403358713348502_4758126789560107008_a.jpg?_nc_ht=scontent-ort2-2.cdninstagram.com");
         mNames.add("Preston and Steve");
+        mIgUrls.add("https://www.instagram.com/aus_teaches/");
 
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/8ba47cefea77939cebc8e0c4f64abef5/5D27A4D7/t51.2885-19/11820421_1639239966359747_1652335315_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
+
+        mImageUrls.add("https://scontent-ort2-2.cdninstagram.com/vp/0edda8be8af0bc91f80a246bd82b17ea/5E14F2D7/t51.2885-19/11820421_1639239966359747_1652335315_a.jpg?_nc_ht=scontent-ort2-2.cdninstagram.com");
         mNames.add("Austin Wallace");
+        mIgUrls.add("https://www.instagram.com/aus_teaches/");
 
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/299665f8bc912740ac9e367f0a21c32a/5D0459F9/t51.2885-19/s150x150/43985793_299018654159002_3102772305495851008_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
+        mImageUrls.add("https://scontent-ort2-2.cdninstagram.com/vp/10b9fa1880cb2e7775d7f13338e358cd/5DCF1B09/t51.2885-19/s320x320/43985793_299018654159002_3102772305495851008_n.jpg?_nc_ht=scontent-ort2-2.cdninstagram.com");
         mNames.add("Phila. Eagles");
 
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/439c199a8f2940e1f2bfebdd4a3cad4a/5D16D11A/t51.2885-19/s150x150/44484333_256011951997990_2395104129115488256_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
+        mImageUrls.add("https://scontent-ort2-2.cdninstagram.com/vp/376e9061c341ebfa0a40f03f7ed5e425/5DD18699/t51.2885-19/s320x320/66428595_1158814134318928_8384210511834644480_n.jpg?_nc_ht=scontent-ort2-2.cdninstagram.com");
         mNames.add("Idris Elba");
 
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/6ebcdc1c366180c5362d6b39b9d6e2c7/5D248034/t51.2885-19/s150x150/32672202_1835065730122921_3740261781411463168_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
+        mImageUrls.add("https://scontent-ort2-2.cdninstagram.com/vp/8babb9fe704b17118d558540160a2dac/5DD0B74C/t51.2885-19/s320x320/32672202_1835065730122921_3740261781411463168_n.jpg?_nc_ht=scontent-ort2-2.cdninstagram.com");
         mNames.add("Kim Zolciak");
 
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/da12f3bf7dbe11c81843d433575205a0/5D21E62D/t51.2885-19/926234_643949229031569_1149886592_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
+        mImageUrls.add("https://scontent-ort2-2.cdninstagram.com/vp/439aa2057579568f9c2e429775801417/5DD2E830/t51.2885-19/s320x320/13725590_606876646150486_1841144755_a.jpg?_nc_ht=scontent-ort2-2.cdninstagram.com");
         mNames.add("Tara");
 
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/5458fb06f379a800bcd8a458592cdf1b/5D2663FC/t51.2885-19/11850309_1674349799447611_206178162_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
+        mImageUrls.add("https://scontent-ort2-2.cdninstagram.com/vp/f92e12463edd757a4f5a244f515244a1/5E13B1FC/t51.2885-19/11850309_1674349799447611_206178162_a.jpg?_nc_ht=scontent-ort2-2.cdninstagram.com");
         mNames.add("The Rock");
 
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/d38e50298129089c6d2a9a9c60501d80/5D221475/t51.2885-19/s150x150/26343200_2031055817138272_1453838565610881024_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
+        mImageUrls.add("https://scontent-ort2-2.cdninstagram.com/vp/8336ae46d24881a807f7236f839a4f4c/5DE6330D/t51.2885-19/s320x320/26343200_2031055817138272_1453838565610881024_n.jpg?_nc_ht=scontent-ort2-2.cdninstagram.com");
         mNames.add("Conor McGregor");
 
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/a482671568f2cc9ed0a36632a5076bca/5D230ADE/t51.2885-19/s150x150/51550014_368692490387831_6019134848432603136_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
+        mImageUrls.add("https://scontent-ort2-2.cdninstagram.com/vp/d85fb0fc16c8557c38a035bb415b5c8c/5DE4719A/t51.2885-19/s320x320/61711954_666421717156524_6837856598321266688_n.jpg?_nc_ht=scontent-ort2-2.cdninstagram.com");
         mNames.add("Phila. Flyers");
 
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/662c6aa82b3c2149e76ce266d8731fe8/5D02E20C/t51.2885-19/s150x150/44660222_205869913661907_9147546498072838144_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
+        mImageUrls.add("https://scontent-ort2-2.cdninstagram.com/vp/7cfe313b428f3bf8d9fb467c5d9ae49c/5DE2511B/t51.2885-19/s320x320/65958879_2313459622247793_6134322542711668736_n.jpg?_nc_ht=scontent-ort2-2.cdninstagram.com");
         mNames.add("Knoll");
 
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/9026aee7f55358ae03068bd1b2d25991/5D145A31/t51.2885-19/s150x150/18096183_101046150465002_3393547389640900608_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
+        mImageUrls.add("https://scontent-ort2-2.cdninstagram.com/vp/4f4fd66cd5f0091b7c41a30be851c64d/5DD4DF67/t51.2885-19/s320x320/67168672_386762918643499_6636756175004106752_n.jpg?_nc_ht=scontent-ort2-2.cdninstagram.com");
         mNames.add("Kristen Bell");
 
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/e05e39012740f8422b2185eb99d09472/5D0192D6/t51.2885-19/s150x150/26073781_169124867033689_8018312227729702912_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
+        mImageUrls.add("https://scontent-ort2-2.cdninstagram.com/vp/1133682895ea06c7f5f168034df860ca/5DE4015E/t51.2885-19/s320x320/52641496_654714378294589_1628709928594046976_n.jpg?_nc_ht=scontent-ort2-2.cdninstagram.com");
         mNames.add("Nintendo");
 
-        //break//
 
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/d2171cd8edabffba57a636c83bccbfff/5D23DBF8/t51.2885-19/s150x150/16790327_403358713348502_4758126789560107008_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Preston and Steve");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/8ba47cefea77939cebc8e0c4f64abef5/5D27A4D7/t51.2885-19/11820421_1639239966359747_1652335315_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Austin Wallace");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/299665f8bc912740ac9e367f0a21c32a/5D0459F9/t51.2885-19/s150x150/43985793_299018654159002_3102772305495851008_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Phila. Eagles");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/439c199a8f2940e1f2bfebdd4a3cad4a/5D16D11A/t51.2885-19/s150x150/44484333_256011951997990_2395104129115488256_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Idris Elba");
-
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/6ebcdc1c366180c5362d6b39b9d6e2c7/5D248034/t51.2885-19/s150x150/32672202_1835065730122921_3740261781411463168_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Kim Zolciak");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/da12f3bf7dbe11c81843d433575205a0/5D21E62D/t51.2885-19/926234_643949229031569_1149886592_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Tara");
-
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/5458fb06f379a800bcd8a458592cdf1b/5D2663FC/t51.2885-19/11850309_1674349799447611_206178162_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("The Rock");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/d38e50298129089c6d2a9a9c60501d80/5D221475/t51.2885-19/s150x150/26343200_2031055817138272_1453838565610881024_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Conor McGregor");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/a482671568f2cc9ed0a36632a5076bca/5D230ADE/t51.2885-19/s150x150/51550014_368692490387831_6019134848432603136_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Phila. Flyers");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/662c6aa82b3c2149e76ce266d8731fe8/5D02E20C/t51.2885-19/s150x150/44660222_205869913661907_9147546498072838144_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Knoll");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/9026aee7f55358ae03068bd1b2d25991/5D145A31/t51.2885-19/s150x150/18096183_101046150465002_3393547389640900608_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Kristen Bell");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/e05e39012740f8422b2185eb99d09472/5D0192D6/t51.2885-19/s150x150/26073781_169124867033689_8018312227729702912_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Nintendo");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/d2171cd8edabffba57a636c83bccbfff/5D23DBF8/t51.2885-19/s150x150/16790327_403358713348502_4758126789560107008_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Preston and Steve");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/8ba47cefea77939cebc8e0c4f64abef5/5D27A4D7/t51.2885-19/11820421_1639239966359747_1652335315_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Austin Wallace");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/299665f8bc912740ac9e367f0a21c32a/5D0459F9/t51.2885-19/s150x150/43985793_299018654159002_3102772305495851008_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Phila. Eagles");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/439c199a8f2940e1f2bfebdd4a3cad4a/5D16D11A/t51.2885-19/s150x150/44484333_256011951997990_2395104129115488256_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Idris Elba");
-
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/6ebcdc1c366180c5362d6b39b9d6e2c7/5D248034/t51.2885-19/s150x150/32672202_1835065730122921_3740261781411463168_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Kim Zolciak");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/da12f3bf7dbe11c81843d433575205a0/5D21E62D/t51.2885-19/926234_643949229031569_1149886592_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Tara");
-
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/5458fb06f379a800bcd8a458592cdf1b/5D2663FC/t51.2885-19/11850309_1674349799447611_206178162_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("The Rock");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/d38e50298129089c6d2a9a9c60501d80/5D221475/t51.2885-19/s150x150/26343200_2031055817138272_1453838565610881024_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Conor McGregor");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/a482671568f2cc9ed0a36632a5076bca/5D230ADE/t51.2885-19/s150x150/51550014_368692490387831_6019134848432603136_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Phila. Flyers");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/662c6aa82b3c2149e76ce266d8731fe8/5D02E20C/t51.2885-19/s150x150/44660222_205869913661907_9147546498072838144_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Knoll");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/9026aee7f55358ae03068bd1b2d25991/5D145A31/t51.2885-19/s150x150/18096183_101046150465002_3393547389640900608_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Kristen Bell");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/e05e39012740f8422b2185eb99d09472/5D0192D6/t51.2885-19/s150x150/26073781_169124867033689_8018312227729702912_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Nintendo");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/d2171cd8edabffba57a636c83bccbfff/5D23DBF8/t51.2885-19/s150x150/16790327_403358713348502_4758126789560107008_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Preston and Steve");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/8ba47cefea77939cebc8e0c4f64abef5/5D27A4D7/t51.2885-19/11820421_1639239966359747_1652335315_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Austin Wallace");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/299665f8bc912740ac9e367f0a21c32a/5D0459F9/t51.2885-19/s150x150/43985793_299018654159002_3102772305495851008_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Phila. Eagles");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/439c199a8f2940e1f2bfebdd4a3cad4a/5D16D11A/t51.2885-19/s150x150/44484333_256011951997990_2395104129115488256_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Idris Elba");
-
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/6ebcdc1c366180c5362d6b39b9d6e2c7/5D248034/t51.2885-19/s150x150/32672202_1835065730122921_3740261781411463168_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Kim Zolciak");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/da12f3bf7dbe11c81843d433575205a0/5D21E62D/t51.2885-19/926234_643949229031569_1149886592_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Tara");
-
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/5458fb06f379a800bcd8a458592cdf1b/5D2663FC/t51.2885-19/11850309_1674349799447611_206178162_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("The Rock");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/d38e50298129089c6d2a9a9c60501d80/5D221475/t51.2885-19/s150x150/26343200_2031055817138272_1453838565610881024_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Conor McGregor");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/a482671568f2cc9ed0a36632a5076bca/5D230ADE/t51.2885-19/s150x150/51550014_368692490387831_6019134848432603136_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Phila. Flyers");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/662c6aa82b3c2149e76ce266d8731fe8/5D02E20C/t51.2885-19/s150x150/44660222_205869913661907_9147546498072838144_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Knoll");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/9026aee7f55358ae03068bd1b2d25991/5D145A31/t51.2885-19/s150x150/18096183_101046150465002_3393547389640900608_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Kristen Bell");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/e05e39012740f8422b2185eb99d09472/5D0192D6/t51.2885-19/s150x150/26073781_169124867033689_8018312227729702912_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Nintendo");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/d2171cd8edabffba57a636c83bccbfff/5D23DBF8/t51.2885-19/s150x150/16790327_403358713348502_4758126789560107008_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Preston and Steve");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/8ba47cefea77939cebc8e0c4f64abef5/5D27A4D7/t51.2885-19/11820421_1639239966359747_1652335315_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Austin Wallace");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/299665f8bc912740ac9e367f0a21c32a/5D0459F9/t51.2885-19/s150x150/43985793_299018654159002_3102772305495851008_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Phila. Eagles");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/439c199a8f2940e1f2bfebdd4a3cad4a/5D16D11A/t51.2885-19/s150x150/44484333_256011951997990_2395104129115488256_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Idris Elba");
-
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/6ebcdc1c366180c5362d6b39b9d6e2c7/5D248034/t51.2885-19/s150x150/32672202_1835065730122921_3740261781411463168_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Kim Zolciak");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/da12f3bf7dbe11c81843d433575205a0/5D21E62D/t51.2885-19/926234_643949229031569_1149886592_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Tara");
-
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/5458fb06f379a800bcd8a458592cdf1b/5D2663FC/t51.2885-19/11850309_1674349799447611_206178162_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("The Rock");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/d38e50298129089c6d2a9a9c60501d80/5D221475/t51.2885-19/s150x150/26343200_2031055817138272_1453838565610881024_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Conor McGregor");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/a482671568f2cc9ed0a36632a5076bca/5D230ADE/t51.2885-19/s150x150/51550014_368692490387831_6019134848432603136_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Phila. Flyers");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/662c6aa82b3c2149e76ce266d8731fe8/5D02E20C/t51.2885-19/s150x150/44660222_205869913661907_9147546498072838144_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Knoll");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/9026aee7f55358ae03068bd1b2d25991/5D145A31/t51.2885-19/s150x150/18096183_101046150465002_3393547389640900608_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Kristen Bell");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/e05e39012740f8422b2185eb99d09472/5D0192D6/t51.2885-19/s150x150/26073781_169124867033689_8018312227729702912_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Nintendo");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/d2171cd8edabffba57a636c83bccbfff/5D23DBF8/t51.2885-19/s150x150/16790327_403358713348502_4758126789560107008_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Preston and Steve");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/8ba47cefea77939cebc8e0c4f64abef5/5D27A4D7/t51.2885-19/11820421_1639239966359747_1652335315_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Austin Wallace");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/299665f8bc912740ac9e367f0a21c32a/5D0459F9/t51.2885-19/s150x150/43985793_299018654159002_3102772305495851008_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Phila. Eagles");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/439c199a8f2940e1f2bfebdd4a3cad4a/5D16D11A/t51.2885-19/s150x150/44484333_256011951997990_2395104129115488256_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Idris Elba");
-
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/6ebcdc1c366180c5362d6b39b9d6e2c7/5D248034/t51.2885-19/s150x150/32672202_1835065730122921_3740261781411463168_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Kim Zolciak");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/da12f3bf7dbe11c81843d433575205a0/5D21E62D/t51.2885-19/926234_643949229031569_1149886592_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Tara");
-
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/5458fb06f379a800bcd8a458592cdf1b/5D2663FC/t51.2885-19/11850309_1674349799447611_206178162_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("The Rock");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/d38e50298129089c6d2a9a9c60501d80/5D221475/t51.2885-19/s150x150/26343200_2031055817138272_1453838565610881024_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Conor McGregor");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/a482671568f2cc9ed0a36632a5076bca/5D230ADE/t51.2885-19/s150x150/51550014_368692490387831_6019134848432603136_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Phila. Flyers");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/662c6aa82b3c2149e76ce266d8731fe8/5D02E20C/t51.2885-19/s150x150/44660222_205869913661907_9147546498072838144_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Knoll");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/9026aee7f55358ae03068bd1b2d25991/5D145A31/t51.2885-19/s150x150/18096183_101046150465002_3393547389640900608_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Kristen Bell");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/e05e39012740f8422b2185eb99d09472/5D0192D6/t51.2885-19/s150x150/26073781_169124867033689_8018312227729702912_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Nintendo");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/d2171cd8edabffba57a636c83bccbfff/5D23DBF8/t51.2885-19/s150x150/16790327_403358713348502_4758126789560107008_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Preston and Steve");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/8ba47cefea77939cebc8e0c4f64abef5/5D27A4D7/t51.2885-19/11820421_1639239966359747_1652335315_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Austin Wallace");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/299665f8bc912740ac9e367f0a21c32a/5D0459F9/t51.2885-19/s150x150/43985793_299018654159002_3102772305495851008_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Phila. Eagles");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/439c199a8f2940e1f2bfebdd4a3cad4a/5D16D11A/t51.2885-19/s150x150/44484333_256011951997990_2395104129115488256_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Idris Elba");
-
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/6ebcdc1c366180c5362d6b39b9d6e2c7/5D248034/t51.2885-19/s150x150/32672202_1835065730122921_3740261781411463168_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Kim Zolciak");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/da12f3bf7dbe11c81843d433575205a0/5D21E62D/t51.2885-19/926234_643949229031569_1149886592_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Tara");
-
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/5458fb06f379a800bcd8a458592cdf1b/5D2663FC/t51.2885-19/11850309_1674349799447611_206178162_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("The Rock");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/d38e50298129089c6d2a9a9c60501d80/5D221475/t51.2885-19/s150x150/26343200_2031055817138272_1453838565610881024_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Conor McGregor");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/a482671568f2cc9ed0a36632a5076bca/5D230ADE/t51.2885-19/s150x150/51550014_368692490387831_6019134848432603136_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Phila. Flyers");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/662c6aa82b3c2149e76ce266d8731fe8/5D02E20C/t51.2885-19/s150x150/44660222_205869913661907_9147546498072838144_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Knoll");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/9026aee7f55358ae03068bd1b2d25991/5D145A31/t51.2885-19/s150x150/18096183_101046150465002_3393547389640900608_a.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Kristen Bell");
-
-        mImageUrls.add("https://instagram.fphl2-4.fna.fbcdn.net/vp/e05e39012740f8422b2185eb99d09472/5D0192D6/t51.2885-19/s150x150/26073781_169124867033689_8018312227729702912_n.jpg?_nc_ht=instagram.fphl2-4.fna.fbcdn.net");
-        mNames.add("Nintendo");
-
-        //break//
 
 
         initRecyclerView();
