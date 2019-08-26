@@ -90,7 +90,7 @@ public class IgFav extends AppCompatActivity implements SearchView.OnQueryTextLi
 
         mImageUrls.add("https://scontent-ort2-2.cdninstagram.com/vp/90279ff5e8086e833f3241de5c56eba3/5DE02608/t51.2885-19/s320x320/16790327_403358713348502_4758126789560107008_a.jpg?_nc_ht=scontent-ort2-2.cdninstagram.com");
         mNames.add("Preston and Steve");
-        mIgUrls.add("https://www.instagram.com/aus_teaches/");
+        mIgUrls.add("https://www.instagram.com/preston/");
 
 
         mImageUrls.add("https://scontent-ort2-2.cdninstagram.com/vp/0edda8be8af0bc91f80a246bd82b17ea/5E14F2D7/t51.2885-19/11820421_1639239966359747_1652335315_a.jpg?_nc_ht=scontent-ort2-2.cdninstagram.com");
